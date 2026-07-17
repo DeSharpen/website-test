@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Scroll Video Experience</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Loading screen -->
+    <div id="loader" class="loader" aria-label="Loading">
+      <div class="loader__spinner"></div>
+      <span class="loader__text">Loading experience</span>
+    </div>
+
+    <!-- Fixed video layer -->
+    <div class="video-stage">
+      <video
+        id="scrubVideo"
+        class="scrub-video"
+        muted
+        playsinline
+        preload="auto"
+      >
+        <!-- Replace with your own video file path -->
+        <source src="intro.mp4" type="video/mp4" />
+      </video>
+
+      <!-- Optional dark overlay that fades while scrolling -->
+      <div id="videoOverlay" class="video-overlay"></div>
+    </div>
+
+    <!-- Scroll distance used to control the video -->
+    <div id="scrollZone" class="scroll-zone" aria-hidden="true"></div>
+
+    <!-- Auto scroll button -->
+    <button id="autoPlayButton" type="button">Auto Play</button>
+
+    <main class="content">
+      <!-- This is the anchor where Auto Play ends -->
+      <section id="next-section" class="section section--intro">
+        <div class="section__inner">
+          <p class="eyebrow">Scroll Experience</p>
+
+          <h1>Discover what comes next.</h1>
+
+          <p class="section__text">
+            The video animation has finished. This is the next section of
+            your website content.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--dark">
+        <div class="section__inner">
+          <p class="eyebrow">Story</p>
+
+          <h2>Built for movement.</h2>
+
+          <p class="section__text">
+            Replace this content with your own sections, images, products,
+            portfolio work, or information.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--light">
+        <div class="section__inner">
+          <p class="eyebrow">Next Step</p>
+
+          <h2>Your final content section.</h2>
+
+          <p class="section__text">
+            Add any content below the scroll-controlled video experience.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
