@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scccroll Videocc Experience</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Loading screen -->
+    <div id="loader" class="loader" aria-label="Loading">
+      <div class="loader__spinner"></div>
+      <span class="loader__text">Loading experience</span>
+    </div>
+
+    <!-- Fixed video layer -->
+    <div class="video-stage">
+      <video id="scrubVideo" muted playsinline preload="auto"></video>
+      <div id="videoOverlay" class="video-overlay"></div>
+    </div>
+
+    <!-- Scroll distance used to control the video -->
+    <div id="scrollZone" class="scroll-zone" aria-hidden="true"></div>
+
+    <!-- Story section -->
+    <section class="story-section" id="story">
+      <div class="story-content">
+        <h2 class="story-title">The Story</h2>
+        <p class="story-text">
+          At just 21 years old, Imed Benkolli has already made his mark in social
+          media and creative marketing. After years of experimenting with editing,
+          visual effects, and digital content, he found his breakthrough in the
+          automotive space, where his work has generated hundreds of millions of
+          views and led to collaborations with some of the world's biggest
+          <span class="story-highlight">brands.</span>
+        </p>
+        <p class="story-tagline">One Guy. More like a studio.</p>
+      </div>
+    </section>
+
+    <!-- Views section with bg2 video background -->
+    <section class="views-section" id="views">
+      <video class="views-bg-video" autoplay muted loop playsinline>
+        <source src="bg2.mp4" type="video/mp4" />
+      </video>
+
+      <div class="views-overlay"></div>
+
+      <div class="views-content">
+        <div class="views-number" id="viewsHover">
+          <span class="views-plus">+</span>
+          <span id="viewsCount" class="views-digits" aria-label="views generated"></span>
+          <span class="views-label">VIEWS</span>
+          <span class="views-sub">GENERATED</span>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
